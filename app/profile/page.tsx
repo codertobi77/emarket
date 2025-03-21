@@ -1,5 +1,6 @@
 import { UserProfile } from "@clerk/nextjs";
 import { SignedIn, SignedOut, RedirectToSignIn } from "@clerk/nextjs";
+import UserRoleDisplay from "@/components/auth/UserRoleDisplay";
 
 export default function ProfilePage() {
   return (
@@ -8,6 +9,10 @@ export default function ProfilePage() {
         <div className="p-4">
           <h1 className="text-2xl font-bold mb-4">Your Profile</h1>
           <div className="max-w-4xl mx-auto">
+            {/* Display user role information */}
+            <UserRoleDisplay />
+            
+            {/* Clerk's UserProfile component */}
             <UserProfile
               path="/profile"
               routing="path"

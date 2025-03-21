@@ -2,6 +2,7 @@ import { type Metadata } from 'next'
 import { ClerkProvider } from '@clerk/nextjs'
 import Header from '@/components/navigation/header'
 import { Geist, Geist_Mono } from 'next/font/google'
+import RoleBasedRedirect from '@/components/providers/RoleBasedRedirect'
 import './globals.css'
 
 const geistSans = Geist({
@@ -29,6 +30,7 @@ export default function RootLayout({
       <html lang="en">
         <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
           <Header />
+          <RoleBasedRedirect />
           {children}
         </body>
       </html>
