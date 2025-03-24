@@ -7,6 +7,7 @@ export const publicRoutes = [
   '/auth/signin/(.*)',
   '/auth/signup',
   '/auth/signup/(.*)',
+  '/profile(.*)', // Allow all profile routes for UserProfile component
 ];
 
 // Define routes that require authentication with specific roles
